@@ -52,7 +52,7 @@ class CarHomeViewController: UIViewController {
             guard error == nil else {
                 return
             }
-            self?.allCars = allCars?.result ?? [] 
+            self?.allCars = allCars?.result ?? []
             DispatchQueue.main.async {
                 self?.carCollectionView.reloadData()
             }
@@ -94,7 +94,7 @@ extension CarHomeViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.carLocation.text = "\(path.city) - \(path.state)"
         cell.carPrice.text = "₦\(formattedNumber ?? "")"
         cell.carImage.sd_setImage(with: URL(string: path.imageUrl))
-        cell.carRating.text = String(format: "%.1f", path.gradeScore)
+        cell.carRating.text = String(format: "%.1f", path.gradeScore ?? 5.0)
         return cell
     }
     

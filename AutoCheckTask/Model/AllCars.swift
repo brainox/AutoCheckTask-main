@@ -19,7 +19,7 @@ struct CarResults: Decodable {
     let year: Int
     let city: String
     let state: String
-    let gradeScore: Double
+    let gradeScore: Double?
     let marketplacePrice: Int
 }
 
