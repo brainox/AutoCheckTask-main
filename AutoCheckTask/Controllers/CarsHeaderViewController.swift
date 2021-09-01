@@ -46,7 +46,7 @@ class CarsHeaderViewController: UICollectionViewController {
     
 }
 
-// DataSource
+// DataSource Section
 extension CarsHeaderViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
